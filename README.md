@@ -1,2 +1,31 @@
-# Mathematical-Trading-Strategies
-Official repo for submission of assignments in Mathematical Trading Strategies
+
+# MATHEMATICAL TRADING STRATEGIES
+
+ASSIGNMENT 1
+
+
+Tables :
+  
+   
+|   |^IXIC|^NYA|^RUT|^N225|^GSPC|
+ |---|---|---|---|---|---|
+ |Cumulative returns|3.534045|1.072451|1.751523|1.449086|1.449086
+ |  Volatility|59322.652622	|43665.203820|	7147.596026|	101379.201094|	15792.095410|
+ | Sharpe Ratio|27.862925|	65.572563|	46.653561	|45.771632|	38.782450
+ | Max Drawdown|-2.531667|	-0.737821|	-1.238713|	-0.724349|	-1.076382
+ | Sortino Ratio|-1.799498|	-2.074321|	-1.658158	|-1.820089|	-2.046405
+
+
+
+|   |AAL|AAPL|MSFT|AMZN|MSFT|
+ |---|---|---|---|---|---|
+ |Cumulative returns|1.828630|	18.942555	|9.126222|	11.546676|	4.625323
+ |  Volatility|1.828630	|18.942555	|9.126222	|11.546676|	4.625323|
+ | Sharpe Ratio|28.150623|	16.518229	|17.051572|	17.396249|	21.925871
+ | Max Drawdown|-10.662672	|-8.429462	|-5.331948|	-15.646078|	-4.234039
+ | Sortino Ratio|-0.924190	|-1.397697|	-1.548747|	-1.283153|	-1.505163
+
+
+
+
+	
