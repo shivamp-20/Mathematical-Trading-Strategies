@@ -1,9 +1,9 @@
-﻿Mathematical Trading Strategies
+# Assignment 1
 
 
 
-Assignment 1
 
+Indices
 ||^DJI |^FCHI|^KS11   |^RUT    |<p>^XAX    </p><p></p>|
 | :-: | :-: | :-: | :-: | :-: | :-: |
 |Volatility|0.169167|<p>0\.202544    </p><p></p>|0\.162076    |0\.226480    |0\.192963    |
@@ -12,7 +12,7 @@ Assignment 1
 |Max Drawdown|-0.370862|-0.385585|<p>-0.438979     </p><p></p>|-0.430613     |-0.535116     |
 
 
-
+Equities
 
 ||AAPL    |AMZN    |GOOGL   |MSFT    |RY      |
 | :-: | :-: | :-: | :-: | :-: | :-: |
