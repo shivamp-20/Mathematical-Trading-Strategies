@@ -1,7 +1,6 @@
 # Mathematical-Trading-Strategies
 Official repo for submission of assignments in Mathematical Trading Strategies
 
-# Mathematical trading strategies
 Insights about the stocks and indices selected for observation
 
 
