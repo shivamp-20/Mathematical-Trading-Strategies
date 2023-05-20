@@ -1,3 +1,5 @@
+*this file only displays correctly when downladed or viewed in edit mode of github
+
 Index Metrics:
 Index/Equity      Standard Deviation    Total Cumulative Return    Max Drawdown    Sharpe Ratio    Sortino Ratio
 --------------  --------------------  -------------------------  --------------  --------------  ---------------
@@ -17,5 +19,5 @@ JNJ                         17.4505                    2.38766       36.9875    
 KO                          26.1395                   12.0063        37.1485        0.411108         0.518105
 
 
-*this file only displays correctly when downladed or viewed in edit mode of github
+
 
