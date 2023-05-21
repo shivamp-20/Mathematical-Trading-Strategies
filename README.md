@@ -1,2 +1,23 @@
-# Mathematical-Trading-Strategies
-Official repo for submission of assignments in Mathematical Trading Strategies
+# FINANCIAL METRIC CALCULATIONS
+
+
+### EQUITIES
+
+|      | TESLA | ABBOTT | ADOBE | IBM | MICROSOFT |
+|------|-------|--------|-------|-----|-----------|
+|CUMMULATIVE RETURNS|102.166|4.713|9.179|0.573|12.00|
+|VOLATILTY|0.5737|0.2185|0.317|0.225|0.2616|
+|MAX DRAWDOWN|-0.7363|-0.328|-0.600|-0.5608|-0.375|
+|SHARPE RATIO|-1.049|-2.867|-1.957|-2.813|-2.377|
+|SORTINO RATIO|-0.0159|-0.0408|-0.0280|-0.038|-0.035|
+
+
+### INDICES
+
+|      | S&P500 | BSE SENSEX | DOW JONES INDEX | RUSSELL 2000 | FTSE 100 |
+|------|--------|------------|-----------------|--------------|----------|
+|CUMMULATIVE RETURNS|2.68|2.48|2.2216|1.7636|0.4309|
+|VOLATILTY|0.177|0.172|0.1717|0.2299|0.1624|
+|MAX DRAWDOWN|-0.339|-0.3807|-0.3708|-0.4306|-0.366|
+|SHARPE RATIO|-3.535|-3.650|-3.658|-2.732|-3.892|
+|SORTINO RATIO|-0.049|-0.0513|-0.0509|-0.0379|-0.0535|
