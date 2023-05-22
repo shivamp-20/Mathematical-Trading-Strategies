@@ -1,0 +1,236 @@
+import yfinance as yf
+import math
+import statistics as stats
+
+start_date = '2010-01-01'
+end_date = '2023-05-01'
+ticker1 = {'DJI', 'HSI', 'DJT', 'SPX', 'DAX'}
+ticker2 = {'NFLX', 'AMZN', 'PYPL', 'AAPL', 'MSFT'}
+
+
+def getData(ticker, start_date, end_date):
+    for t in ticker :
+        data = yf.download(t, start_date, end_date)
+    
+        closeData = data["Close"]
+        openData = data["Open"]
+        high = data["High"]
+        low = data["Low"]
+        maxPrice = max(high)
+        minPrice = min(low)
+        maxDDDaily = min((low-high)/high)
+        dailtPL = data["Close"]-data["Open"]
+
+        dailyCumRet = dailtPL/openData
+
+        netPandL = 0
+        size = 0
+        for x in dailtPL :
+            netPandL = netPandL + x
+            size = size+1
+
+        dailyVol = stats.stdev(dailyCumRet)
+        dailyRetMean = stats.mean(dailtPL)
+        dailyRetSd = stats.stdev(dailtPL)
+        sharpeRatio = dailyRetMean/dailyRetSd
+        
+        onlyLoss = []
+        for x in dailtPL :
+            if x < 0 :
+                onlyLoss.append(x)
+
+        sortinoR = dailyRetMean/stats.stdev(onlyLoss)
+
+        print(t)
+
+        print("Net CR: {:.2f} % \n".format(((closeData[size-1]-openData[0])/openData[0])*100), 
+        "Avg CR: {:.3f} % \n".format(stats.mean(dailyCumRet)*100), 
+        "Net Return: $ {:.2f} \n".format(netPandL), 
+        "Daily Vol:  {:.2f} % \n".format(dailyVol*100),
+        "Annual Vol {:.2f} % \n".format(dailyVol*100*math.sqrt(252)),
+        "Overall Vol {:.2f} % \n".format(dailyVol*100*math.sqrt(size)),
+        "Max DD {:.2f} % \n".format(((minPrice-maxPrice)/maxPrice)*100),
+        "Sharpe Ratio {:.2f} \n".format((sharpeRatio)),
+        "An. Sharpe Ratio {:.2f} \n".format((sharpeRatio)*math.sqrt(252)),
+        "All Sharpe Ratio {:.2f} \n".format((sharpeRatio)*math.sqrt(size)),
+        "Sortino Ratio {:.2f} \n".format((sortinoR)),
+        "An. Sortino Ratio {:.2f} \n".format((sortinoR)*math.sqrt(252)),
+        "All Sortino Ratio {:.2f} \n".format((sortinoR)*math.sqrt(size)))
+
+getData(ticker1, start_date, end_date)
+getData(ticker2, start_date, end_date)
+
+
+
+OUTPUT
+
+
+
+[*********************100%***********************]  1 of 1 completed
+SPX
+Net CR: -3.08 % 
+ Avg CR: -0.019 % 
+ Net Return: $ -0.13 
+ Daily Vol:  5.88 % 
+ Annual Vol 93.41 % 
+ Overall Vol 264.22 % 
+ Max DD -99.34 % 
+ Sharpe Ratio -0.01 
+ An. Sharpe Ratio -0.18 
+ All Sharpe Ratio -0.50 
+ Sortino Ratio -0.01 
+ An. Sortino Ratio -0.15 
+ All Sortino Ratio -0.43 
+
+
+[*********************100%***********************]  1 of 1 completed
+DJI
+Net CR: 220.21 % 
+ Avg CR: -0.000 % 
+ Net Return: $ -561.00 
+ Daily Vol:  0.22 % 
+ Annual Vol 3.54 % 
+ Overall Vol 11.99 % 
+ Max DD -73.68 % 
+ Sharpe Ratio -0.00 
+ An. Sharpe Ratio -0.06 
+ All Sharpe Ratio -0.19 
+ Sortino Ratio -0.00 
+ An. Sortino Ratio -0.02 
+ All Sortino Ratio -0.05 
+
+
+[*********************100%***********************]  1 of 1 completed
+DAX
+Net CR: 20.73 % 
+ Avg CR: -0.043 % 
+ Net Return: $ -28.10 
+ Daily Vol:  0.86 % 
+ Annual Vol 13.66 % 
+ Overall Vol 39.85 % 
+ Max DD -51.98 % 
+ Sharpe Ratio -0.06 
+ An. Sharpe Ratio -0.91 
+ All Sharpe Ratio -2.66 
+ Sortino Ratio -0.07 
+ An. Sortino Ratio -1.19 
+ All Sortino Ratio -3.46 
+
+
+[*********************100%***********************]  1 of 1 completed
+HSI
+Net CR: 1926098.36 % 
+ Avg CR: 0.024 % 
+ Net Return: $ 7499.44 
+ Daily Vol:  1.85 % 
+ Annual Vol 29.42 % 
+ Overall Vol 99.32 % 
+ Max DD -100.00 % 
+ Sharpe Ratio 0.03 
+ An. Sharpe Ratio 0.43 
+ All Sharpe Ratio 1.46 
+ Sortino Ratio 0.01 
+ An. Sortino Ratio 0.21 
+ All Sortino Ratio 0.70 
+
+
+[*********************100%***********************]  1 of 1 completed
+DJT
+Net CR: 269.39 % 
+ Avg CR: 0.014 % 
+ Net Return: $ 1400.84 
+ Daily Vol:  0.72 % 
+ Annual Vol 11.40 % 
+ Overall Vol 29.06 % 
+ Max DD -77.14 % 
+ Sharpe Ratio 0.01 
+ An. Sharpe Ratio 0.22 
+ All Sharpe Ratio 0.55 
+ Sortino Ratio 0.01 
+ An. Sortino Ratio 0.21 
+ All Sortino Ratio 0.53 
+
+
+[*********************100%***********************]  1 of 1 completed
+AAPL
+Net CR: 2126.04 % 
+ Avg CR: 0.037 % 
+ Net Return: $ 127.14 
+ Daily Vol:  1.40 % 
+ Annual Vol 22.24 % 
+ Overall Vol 81.14 % 
+ Max DD -96.29 % 
+ Sharpe Ratio 0.03 
+ An. Sharpe Ratio 0.52 
+ All Sharpe Ratio 1.89 
+ Sortino Ratio 0.04 
+ An. Sortino Ratio 0.61 
+ All Sortino Ratio 2.21 
+
+
+[*********************100%***********************]  1 of 1 completed
+MSFT
+Net CR: 903.46 % 
+ Avg CR: 0.043 % 
+ Net Return: $ 125.45 
+ Daily Vol:  1.26 % 
+ Annual Vol 20.08 % 
+ Overall Vol 73.24 % 
+ Max DD -93.50 % 
+ Sharpe Ratio 0.02 
+ An. Sharpe Ratio 0.29 
+ All Sharpe Ratio 1.07 
+ Sortino Ratio 0.02 
+ An. Sortino Ratio 0.34 
+ All Sortino Ratio 1.24 
+
+
+[*********************100%***********************]  1 of 1 completed
+PYPL
+Net CR: 100.00 % 
+ Avg CR: -0.017 % 
+ Net Return: $ -138.78 
+ Daily Vol:  1.92 % 
+ Annual Vol 30.53 % 
+ Overall Vol 85.34 % 
+ Max DD -90.33 % 
+ Sharpe Ratio -0.03 
+ An. Sharpe Ratio -0.46 
+ All Sharpe Ratio -1.27 
+ Sortino Ratio -0.03 
+ An. Sortino Ratio -0.55 
+ All Sortino Ratio -1.53 
+
+
+[*********************100%***********************]  1 of 1 completed
+NFLX
+Net CR: 4059.78 % 
+ Avg CR: 0.093 % 
+ Net Return: $ 81.88 
+ Daily Vol:  2.44 % 
+ Annual Vol 38.76 % 
+ Overall Vol 141.38 % 
+ Max DD -99.01 % 
+ Sharpe Ratio 0.00 
+ An. Sharpe Ratio 0.07 
+ All Sharpe Ratio 0.26 
+ Sortino Ratio 0.01 
+ An. Sortino Ratio 0.09 
+ All Sortino Ratio 0.32 
+
+
+[*********************100%***********************]  1 of 1 completed
+AMZN
+Net CR: 1447.89 % 
+ Avg CR: 0.018 % 
+ Net Return: $ -81.45 
+ Daily Vol:  1.64 % 
+ Annual Vol 26.09 % 
+ Overall Vol 95.18 % 
+ Max DD -97.20 % 
+ Sharpe Ratio -0.02 
+ An. Sharpe Ratio -0.28 
+ All Sharpe Ratio -1.02 
+ Sortino Ratio -0.02 
+ An. Sortino Ratio -0.33 
+ All Sortino Ratio -1.19
