@@ -1,2 +1,20 @@
-# Mathematical-Trading-Strategies
-Official repo for submission of assignments in Mathematical Trading Strategies
+
+# Mathematical Trading Strategies
+
+## Assignment 1
+
+### INDEXS:
+| | GSPC  | IXIC |  DJI |FTSE|N225|
+| :------------ |:---------------| :-----| :-----|:-----|:------|
+| Cumulative returns    | 3.221683 | 1.430940|3.680068 |5.296515 | 2.708307 |
+| Sharpe Ratio|-29.225984      | -31.231706|-28.212251 | -24.160214|-24.487618 |
+| Sortiono Ratio |-34.750337|  -39.744548 |-33.981481 | -30.020399|-32.409840 |
+| Max Drawdown | -0.370862     | -0.366055 |-0.339250 |-0.363953 | -0.317989|
+
+### EQUITIES
+| | AAPL  | AMZN |  GOOGL  |  INFY      |MSFT|
+| :------------ |:---------------| :-----| :-----|:-----|:------|
+| Cumulative returns    |26.083432|15.750559|6.843728 |2.950364| 13.006321 |
+| Sharpe Ratio|-16.621524   |-14.399658|-17.797396| -16.667856|-18.412408 |
+| Sortiono Ratio |-23.213332|  -20.562757 |-24.860270| -20.960123|-25.739593|
+| Max Drawdown | -0.437972     | -0.561453 |-0.443201 |-0.494165 | -0.371485|
