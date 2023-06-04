@@ -27,6 +27,49 @@ lags = np.arange(-len(closing_prices_stock1) + 1, len(closing_prices_stock2))
 plt.figure(figsize=(10, 5))
 plt.stem(lags, cross_corr)
  
+ import pandas as pd
+import numpy as np
+
+def calculate_keltner_channel(dataframe, n=20, atr_multiplier=2):
+    # Calculate Average True Range (ATR)
+    dataframe['TR'] = dataframe['High'] - dataframe['Low']
+    dataframe['TR_avg'] = dataframe['TR'].rolling(n).mean()
+  
+df = pd.DataFrame({
+    'Date': [],
+    'Open': [],
+    'High': [],
+    'Low': [],
+    'Close': []
+})
+
+df = calculate_keltner_channel(df)
+
+# Print the DataFrame with Keltner Channel values
+print(df[['Date', 'Close', 'Upper', 'Middle', 'Lower']])
+
+import pandas as pd
+import numpy as np
+
+def calculate_bollinger_bands(dataframe, n=20, k=2):
+    # Calculate the rolling mean and standard deviation
+    dataframe['MA'] = dataframe['Close'].rolling(n).mean()
+    dataframe['std'] = dataframe['Close'].rolling(n).std()
+    
+   
+df = pd.DataFrame({
+    'Date': [],
+    'Open': [],
+    'High': [],
+    'Low': [],
+    'Close': []
+})
+
+df = calculate_bollinger_bands(df)
+
+print(df[['Date', 'Close', 'Upper', 'MA', 'Lower']])
+
+
  
  @Explanation
 # keltner channe.length equalo 3 makes the three lines close and main line close to NSE.multiplier equal to 1 and atr length 6 will make channel lines super impose to Nse indice line.
