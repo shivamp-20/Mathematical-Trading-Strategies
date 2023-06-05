@@ -1,32 +1,72 @@
+Mathematical Trading Strategies
+
+Name- Vatsaankit Mudgal
+Roll No- 221178
+
+
 Assignment 2
 
-The objective of this assignment is to analyze the NASDAQ and NSE indices to identify their correlation and establish potential lead-lag relationships. The next step is to code Keltner Channel, Bollinger Bands, and MACD indicators, determining the optimal parameters for these indicators on one of the indices, and generating buy and sell signals on the other index. 
-Note : Utilize the established relationship to determine which index should be used for parameter optimization and which one for trading purposes.
+Description: Firstly I have used a combined strategy that produces buy and sell signals using all the 3 indicators in a combined manner. It is a more complex strategy. Later I have created a strategy that gives the returns for individual indicators.
 
-Tasks:
+Also according to the correlation factor calculated for different lag periods, the best factor came out to be when the lag period was 19 days. Also I have arrived to the conclusion that NSEI is lagging IXIC.
 
-Correlation Analysis:
-a) Collect historical data for NASDAQ and NSE indices.
-b) Calculate the correlation coefficient between the two indices.
-c) Analyze the strength and direction of the relationship.
+However I have explained the methodology and the code very elaborately in the code itself, I will just describe the strategy I have used.
 
-Lead-Lag Relationship:
-a) Identify potential lead-lag relationships between the indices.
-b) Analyze data to determine consistent leading or lagging behavior.
-c) Use the lead-lag relationship to determine the index to be used for parameter optimization.
-d) Provide an explanation for choosing the index for parameter optimization
+ conditions = [
+    (dfx['MACD_Signal'] == 1) & (dfx['BB_Signal'] == 1),
+    (dfx['MACD_Signal'] == -1) & (dfx['BB_Signal'] == -1),
+    (dfx['MACD_Signal'] == 1) & (dfx['KC_Signal'] == 1),
+    (dfx['MACD_Signal'] == -1) & (dfx['KC_Signal'] == 1),
+    (dfx['MACD_Signal'] == 1) & (dfx['KC_Signal'] == -1),
+    (dfx['MACD_Signal'] == -1) & (dfx['KC_Signal'] == -1),
+    (dfx['MACD_Signal'] == -1) & (dfx['BB_Signal'] == 1),
+    (dfx['MACD_Signal'] == 1) & (dfx['BB_Signal'] == -1)
+    ]
 
-Indicator Coding:
-a) Code Keltner Channel, Bollinger Bands, and MACD indicators.
+Here dfx is the dataframe in which I have stored various datas. This table basically generates the signals that are being used to place trades. The trade signals that this table produces are respectively:
 
-Parameter Optimization:
-a) Optimize parameters for the indicators on one index.
-b) Use metrics coded in last assignment to evaluate your strategy.
-c) Document the optimized parameters for future reference.
+choices = [1, -1, 1, -1, -1, -1,0,0]
+dfx['Signal'] = np.select(conditions, choices, default=0)
 
-Signal Generation:
-a) Apply optimized parameters to the other index.
-b) Generate buy and sell signals using the indicators.
-c) Record the signals, their respective dates and returns along with other metrics covered before.
+This is how I have created a column for the signals.
 
-Your submission should be a Jupyter notebook, where all cells have been run and contain both code and explanations. The deadline for submission is June 3(Sunday) EOD.
+BB stands for Bollinger bands and KC stands for Keltner Channel.
+For this strategy, I get the following results on NIFTY 50 and NASDAQ COMPOSITE:
+
+                             NIFTY 50
+
+Cumulative Return = 546.3653328473898%
+Sharpe Ratio =   0.17217826651888024
+Max Drawdown = -50.29137285386618%
+
+                         
+                 NASDAQ COMPOSITE
+
+Cumulative Return = 1160.5465495866472% 
+Sharpe Ratio = 0.18646734980776278
+Max Drawdown = -23.68515666096469%
+
+
+Later I have calculated these metrics with individual indicators being used. For them I have used simple strategy.
+
+MACD- go Long if MACD>SIGNAL and Short if MACD<SIGNAL 
+
+Bollinger Bands- go Long is price close below lower band and go short if it closes above the upper band
+
+Keltner Channels- go Long if the close price above the upper band and go short if the close price below the lower band
+
+
+
+	MACD	Bollinger Bands	Keltner Channels
+Cumulative returns	889.6391354%
+	847.34390214497%
+	996.663904702996%
+
+Sharpe Ratio	0.0636393673
+	0.1479694528441	0.17302710730651424
+
+Max Drawdown	-74.9445741%
+	-14.21487426039%	-19.536823009716908%
+
+
+These metrics are for the NASDAQ Composite.
