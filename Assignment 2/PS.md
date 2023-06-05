@@ -73,6 +73,6 @@ Keltner Channels- go Long if the close price above the upper band and go short i
 
 	Sharpe Ratio		0.0636393673			0.1479694528441		0.17302710730651424
 
-	Max Drawdown		-74.9445741%	-		14.21487426039%		-19.536823009716908%
+	Max Drawdown		-74.9445741%	-		-14.21487426039%	-19.536823009716908%
 
 These metrics are for the NASDAQ Composite.
