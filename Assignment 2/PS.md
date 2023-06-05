@@ -14,12 +14,19 @@ However I have explained the methodology and the code very elaborately in the co
 
  conditions = [
     (dfx['MACD_Signal'] == 1) & (dfx['BB_Signal'] == 1),
+
     (dfx['MACD_Signal'] == -1) & (dfx['BB_Signal'] == -1),
+
     (dfx['MACD_Signal'] == 1) & (dfx['KC_Signal'] == 1),
+
     (dfx['MACD_Signal'] == -1) & (dfx['KC_Signal'] == 1),
+
     (dfx['MACD_Signal'] == 1) & (dfx['KC_Signal'] == -1),
+
     (dfx['MACD_Signal'] == -1) & (dfx['KC_Signal'] == -1),
+
     (dfx['MACD_Signal'] == -1) & (dfx['BB_Signal'] == 1),
+
     (dfx['MACD_Signal'] == 1) & (dfx['BB_Signal'] == -1)
     ]
 
@@ -61,16 +68,11 @@ Keltner Channels- go Long if the close price above the upper band and go short i
 
 
 
-	MACD	Bollinger Bands	Keltner Channels
-Cumulative returns	889.6391354%
-	847.34390214497%
-	996.663904702996%
+					MACD			Bollinger Bands		Keltner Channels
+	Cumulative returns	889.6391354%			847.34390214497%	996.663904702996%
 
-Sharpe Ratio	0.0636393673
-	0.1479694528441	0.17302710730651424
+	Sharpe Ratio		0.0636393673			0.1479694528441		0.17302710730651424
 
-Max Drawdown	-74.9445741%
-	-14.21487426039%	-19.536823009716908%
-
+	Max Drawdown		-74.9445741%	-		14.21487426039%		-19.536823009716908%
 
 These metrics are for the NASDAQ Composite.
