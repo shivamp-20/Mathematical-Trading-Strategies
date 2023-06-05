@@ -36,14 +36,18 @@ For this strategy, I get the following results on NIFTY 50 and NASDAQ COMPOSITE:
                              NIFTY 50
 
 Cumulative Return = 546.3653328473898%
+
 Sharpe Ratio =   0.17217826651888024
+
 Max Drawdown = -50.29137285386618%
 
                          
                  NASDAQ COMPOSITE
 
 Cumulative Return = 1160.5465495866472% 
+
 Sharpe Ratio = 0.18646734980776278
+
 Max Drawdown = -23.68515666096469%
 
 
