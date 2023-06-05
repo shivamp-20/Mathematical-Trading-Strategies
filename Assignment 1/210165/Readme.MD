@@ -3,8 +3,8 @@ Mathematical Trading Strategies
 Assignment 1
 
 
-||^AXJO|^FTSE|^GDAXI|N225|STOX50E|
-| :-: | :-: | :-: | :-: | :-: | :-: |
+||NASDAQ|^FTSE|^GDAXI|N225|STOX50E|
+| :-:   | :-: | :-: | :-: | :-: | :-: |
 |**Cumulative returns**|0\.49|0\.43|1\.63|1\.71|0\.444|
 |<p>**Volatility**</p><p>**Std. Dev.(daily)**</p>|1\.04%|1\.09%|1\.35%|1\.41%|1\.40%|
 |**Sharpe Ratio**|0\.065|0\.044|0\.27|0\.26|0\.039|
