@@ -5,18 +5,18 @@ Assignment 1
 
 ||NASDAQ|S&P500|RUSSELL 2000|NIFTY50|FTSE100|
 | :-:   | :-: | :-: | :-: | :-: | :-: |
-|**Cumulative returns**|2\.24|1.51|1\.63|1\.71|0\.444|
-|<p>**Volatility**</p><p>**Std. Dev.(daily)**</p>|1\.04%|1\.09%|1\.35%|1\.41%|1\.40%|
-|**Sharpe Ratio**|0\.065|0\.044|0\.27|0\.26|0\.039|
-|**Sortiono Ratio**|0\.083|0\.057|0\.34|0\.35|0\.051|
-|**Max Drawdown**|-53.65%|-50.80%|-88.41%|-72.43%|-49.02%|
+|**Cumulative returns**|2\.24|1.51|1\.37|1\.43|0\.53|
+|<p>**Volatility**</p><p>**Std. Dev.(daily)**</p>|0\.21|0\.18|0\.23|0\.17|0\.16|
+|**Sharpe Ratio**|0\.44|0\.25|0\.14|0\.15|-0\.18|
+|**Sortiono Ratio**|0\.56|0\.30|0\.18|0\.19|-0\.13|
+|**Max Drawdown**|-35.5%|-33.9%|-43.1%|-38.4%|-36.6%|
 
 
 
-||<p>Microsoft</p><p>**MSFT**</p>|<p>Samsung Electronics</p><p>**005930.KS**</p>|<p>Procter and Gamble</p><p>**PG**</p>|<p>Nestle</p><p>**NSRGF**</p>|<p>Coca Cola</p><p>**KO**</p>|
+||<p>KOTAK</p>|<p>SBILIFE</p>|<p>CIPLA</p>|<p>TATA STEEL</p>|<p>MARUTI</p>|
 | :-: | :-: | :-: | :-: | :-: | :-: |
-|**Cumulative returns**|12\.00|4\.21|2\.82|2\.14|2\.39|
-|**Volatility<br>Std. Dev.(daily)**|1\.75%|1\.77%|1\.19%|1\.28%|1\.80%|
-|**Sharpe Ratio**|0\.57|0\.28|0\.22|0\.27|0\.16|
-|**Sortiono Ratio**|1\.25|1\.10|0\.91|0\.89|0\.95|
-|**Max Drawdown**|-508.56%|-273.8%|-91.35%|-84.62%|-106.11%|
+|**Cumulative returns**|2\.76|0\.70|1\.42|1\.49|2\.26|
+|**Volatility<br>Std. Dev.(daily)**|0\.28|0\.29|0\.26|0\.37|0\.29|
+|**Sharpe Ratio**|0\.45|0\.15|0\.12|0\.001|0\.30|
+|**Sortiono Ratio**|0\.52|0\.07|0\.03|-0\.1|0\.29|
+|**Max Drawdown**|-36.49%|-46.8%|-49.33%|-71.84%|-59.26%|
