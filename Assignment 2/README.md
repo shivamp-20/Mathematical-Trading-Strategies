@@ -1,6 +1,7 @@
 Mathematical Trading Strategies
 
 Name- Vatsaankit Mudgal
+
 Roll No- 221178
 
 
@@ -33,6 +34,7 @@ However I have explained the methodology and the code very elaborately in the co
 Here dfx is the dataframe in which I have stored various datas. This table basically generates the signals that are being used to place trades. The trade signals that this table produces are respectively:
 
 choices = [1, -1, 1, -1, -1, -1,0,0]
+
 dfx['Signal'] = np.select(conditions, choices, default=0)
 
 This is how I have created a column for the signals.
@@ -42,20 +44,19 @@ For this strategy, I get the following results on NIFTY 50 and NASDAQ COMPOSITE:
 
                              NIFTY 50
 
-Cumulative Return = 546.3653328473898%
-
-Sharpe Ratio =   0.17217826651888024
-
-Max Drawdown = -50.29137285386618%
-
+Cumulative Return	|	Sharpe Ratio		|	Max Drawdown
+------------------------------------------------------------------------------------
+546.3653328473898%	|	2.7332452462749357	|	-50.29137285386618%
+------------------------------------------------------------------------------------
                          
-                 NASDAQ COMPOSITE
+                 	  
+			  NASDAQ COMPOSITE
 
-Cumulative Return = 1160.5465495866472% 
+Cumulative Return     	|	Sharpe Ratio		|	Max Drawdown 
+------------------------------------------------------------------------------------
+1160.5465495866472%	|	2.9600774113477684	|	-23.68515666096469%
+------------------------------------------------------------------------------------
 
-Sharpe Ratio = 0.18646734980776278
-
-Max Drawdown = -23.68515666096469%
 
 
 Later I have calculated these metrics with individual indicators being used. For them I have used simple strategy.
@@ -68,11 +69,12 @@ Keltner Channels- go Long if the close price above the upper band and go short i
 
 
 
-					MACD			Bollinger Bands		Keltner Channels
-	Cumulative returns	889.6391354%			847.34390214497%	996.663904702996%
+				|		MACD		|	Bollinger Bands		|	Keltner Channels
+	--------------------------------------------------------------------------------------------------------------------					      
+	Cumulative returns	|	889.6391354%		|	847.34390214497%	|	996.663904702996%
 
-	Sharpe Ratio		0.0636393673			0.1479694528441		0.17302710730651424
+	Sharpe Ratio		|	1.010243637		|	2.348942243		|	2.7467201760
 
-	Max Drawdown		-74.9445741%	-		-14.21487426039%	-19.536823009716908%
+	Max Drawdown		|	-74.9445741%	-	|	-14.21487426039%	|	-19.536823009716908%
 
 These metrics are for the NASDAQ Composite.
