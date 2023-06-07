@@ -1,14 +1,6 @@
-### Optimised parameters for Keltner Channel
->window=12  
->atr_window=11  
->atr_multiplier=3
-### Optimised parameters for Bollinger Bands
->window=21  
->num_std=3
-### Optimised parameters for MACD
->short_window=12  
->long_window=26  
->signal_window=9
+# Mathematical Trading Strategies
+
+## Assignment 2
 
 NASDAQ and NSE have a strong correlation. The strength of correlation is high and and direction is positive.
 After analysis it was found that NASDAQ leads and NSE lags. 
@@ -28,3 +20,15 @@ Maximum Drawdown|-3.115932646988304|-2.616539175506242|-4.149814004180698|
 Cumulative returns|361.2183794203646|126.80918261023012|83.63990114278536|
 Sharpe Ratio|0.8351786392209993|0.27647067887488247|0.11860851369015452|
 Maximum Drawdown|-2.7101982659154062|-2.56613638451474|-4.929056067266709|
+
+### Optimised parameters for Keltner Channel
+>window=12  
+>atr_window=11  
+>atr_multiplier=3
+### Optimised parameters for Bollinger Bands
+>window=21  
+>num_std=3
+### Optimised parameters for MACD
+>short_window=12  
+>long_window=26  
+>signal_window=9
