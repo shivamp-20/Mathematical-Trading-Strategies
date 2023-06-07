@@ -1,16 +1,18 @@
 These Ratios are obtained by using yfinance library of pyhton by performing various operaations using pandas library
 
-# Different Ratios for ## Equity
-	||APPLE	MICROSOFT	AMAZON	GENERAL ELECTRIC	GOOGLE
+# Different Ratios for 
+ # Equity
+
+  ||APPLE|	MICROSOFT|	AMAZON|	GENERAL ELECTRIC|	GOOGLE|
   |----------|----------|----------|----------|----------|----------|
-|Cumulative Returns(in %)|	2594.61|	1251.24	|1664.75	|52.65|	691.28|
-|Volatility(in %)|	5.47|	4.99|	6.34|	6.09|	5.23|
-|Sharpe Ratio|	6.33|	4.05|	6.27	|-0.70|	4.75|
-|Sortino Ratio|	2.41|	-1.24	|3.02	|-6.20|	0.00|
-|Maximum Drawdown(in %)|	-96.29|	-93.50	|-97.20	|-82.73	|-92.90|
+  |Cumulative Returns(in %)|	2594.61|	1251.24	|1664.75	|52.65|	691.28|
+  |Volatility(in %)|	5.47|	4.99|	6.34|	6.09|	5.23|
+  |Sharpe Ratio|	6.33|	4.05|	6.27	|-0.70|	4.75|
+  |Sortino Ratio|	2.41|	-1.24	|3.02	|-6.20|	0.00|
+  |Maximum Drawdown(in %)|	-96.29|	-93.50	|-97.20	|-82.73	|-92.90|
 
 
-# Different Ratios for ## Indices
+# Indices
 
 | | S&P500 | Dow&Jones | NASDAQ	 | Nikkei 25|	VIX|
 |----------|----------|----------|----------|----------|----------|
