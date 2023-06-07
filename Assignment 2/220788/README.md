@@ -13,7 +13,7 @@ Correlation Analysis:
 Parameter Optimisation:
  These parameters were optimised on NASDAQ and not directly by generating signals on NASDAQ and trading on NSE which would have given better results. In some cases the cumulative returns were maximum for very low spans in EMA or ATR. I rejected those and took a span of atleast 10. I used brute force to iterate over all cases.
 
- MACD:-
+ MACD:- 10, 29, 7
  Bollinger:- 15, 2.5
  Keltner:- 16, 10, 3
 
