@@ -4,17 +4,20 @@ Assignment 2
 
 Description: 
 
-For Keltner Channels
-Strategy -  if close < lower_band and next_day_close > close: buy signal  
-$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$ if close > upper_band and next_day_close < close: sell signal
+For Keltner Channels </br>
+Strategy -  </br>
+if close < lower_band and next_day_close > close: buy signal  
+if close > upper_band and next_day_close < close: sell signal
 
-For Bollinger Bands
-Strategy - if prev_day_close> lower_band and close < lower_band: buy signal  
-$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$ if prev_day_close < upper_band and close > upper_band: sell signal
+For Bollinger Bands </br>
+Strategy - </br>
+if prev_day_close> lower_band and close < lower_band: buy signal  
+if prev_day_close < upper_band and close > upper_band: sell signal
 
 For MACD
-Strategy - if macd > signal_line: buy signal  
-$~~~~~~~~~~~~~~~~~~~~~$ if macd < signal_line: sell signal
+Strategy - </br>
+if macd > signal_line: buy signal  
+if macd < signal_line: sell signal
 
 |  | MACD | Bollinger Bands| Keltner Channels | 
 |--|---------|---------|---------|
