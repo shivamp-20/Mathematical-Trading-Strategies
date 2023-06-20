@@ -17,7 +17,7 @@ Strategy - if macd > signal_line: buy signal
 $~~~~~~~~~~~~~~~$if macd < signal_line: sell signal
 
 |  | MACD | Bollinger Bands| Keltner Channels | 
-|--|---------|---------|---------|---------|---------|
+|--|---------|---------|---------|
 |Cumulative returns| 86.848| 61.525| 114.993 | 
 |Sharpe Ratio|  0.187 | 0.358 | 0.785 | 
 |Max Drawdown| -5.654 | -16.072 | -15.784 | 
