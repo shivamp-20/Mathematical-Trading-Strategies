@@ -1,1 +1,15 @@
-Daily Returns, Cumulative Returns, Max Drawdowns, the Sharpe Ratio, and Sortino Ratio for 5 different equities and international indices
+ Techniques| GSPC | IXIC | DJI | FTSE | W5000
+------|------|-----|------|------|-----|
+Cumulative Returns | 273.421917 | 432.885602 | 226.902235 | 45.404501 | 255.559393 
+Volatality | 0.177634 | 0.206055 | 0.171818 | 0.162515 |   0.181674  
+Sharpe Ratio | 0.436806 | 0.535864 | 0.387301 | 0.023785 |    0.410781  
+Sortino Ratio | 0.534784 | 0.676756 | 0.468064 | 0.03072 |     0.502423 
+Maximum Drawdown | -3.344587 | -27.268585 | -3.225546 | -3.341905 | -3.731522
+
+ Techniques| AAPL | GOOGL | MSFT | AMZN | IBM
+ ------|------|-----|------|------|-----|
+ Cumulative Returns | 2126.041246 | 584.154466 |  903.461794 | 1447.889863  | 0.796514  
+ Volatality | 0.286001 |  0.272976  |   0.261395   |  0.331799 |   0.22404  
+ Sharpe Ratio | 0.874027 |    0.532964  |   0.730091  |     0.681021 |     0.102996   
+ Sortino Ratio | 1.220651 |       0.74447 |     1.020629 |      0.9725 |     0.130061
+ Maximum Drawdown | -10.198058 | -5.24226  | -33.188195 | -4.070504 | -2.619289
