@@ -1,7 +1,7 @@
 # Mathematical-Trading-Strategies
 This repository contains 3 Assignments as follows-
 
-## [Assignment 1](Assignment 1)
+## Assignment 1
 
 In this Assignment, 5 equities and 5 internation indicies are selected and 5 quantities has been calculated-
 - Cumulative returns
