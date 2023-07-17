@@ -20,5 +20,19 @@ Parameter Optimization: a) Optimize parameters for the indicators on one index. 
 Signal Generation: a) Apply optimized parameters to the other index. b) Generate buy and sell signals using the indicators. c) Record the signals, their respective dates and returns along with other metrics covered before.
 
 # Assignment-3
+Select 10 stocks of your choice and identify the chart patterns mentioned below. If you have an odd roll number, you are assigned patterns with odd index numbers, and if your roll number is even, use patterns with even index numbers. Edit out all the points on the stock's chart where the allotted chart patterns occur. Use your own intuition when identifying these patterns, such as defining roundness or the desired cup shape in the cup and handle pattern. The look-back period is 10 years with a 1-day tick interval.
+
+Chart Patterns:
+
+Ascending triangle
+Descending triangle
+Bear flag
+Bull flag
+Cup and handle
+Inverse cup and handle
+Head and shoulder
+Inverse head and shoulder
+Rounding top
+Rounding bottom
 
 # Assignment-4
