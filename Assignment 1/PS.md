@@ -1,14 +1,24 @@
 Daily Returns, Cumulative Returns, Max Drawdowns, the Sharpe Ratio, and Sortino Ratio for 5 different equities and international indices
 
-Equities    Cumulative returns   Volatility    
-	AAPL        25.083422           0.018016  
-	MSFT        12.006322           0.016466
-	AMZN        14.750559           0.020901
-  GOOGL       5.843728            0.017196
-	JNJ         2.723642            0.010618
+Equities       
+	AAPL        
+	MSFT        
+	AMZN        
+        GOOGL       
+	JNJ        
 	
-	
-	
+         Cumulative returns       
+	        25.083422             
+	        12.006322           
+	       14.750559          
+               5.843728            
+	       2.723642           	
+        Volatility    
+	           0.018016  
+	           0.016466
+	           0.020901
+                   0.017196
+	           0.010618	                  
  Sharpe Ratio
 	0.93083269
 	0.72998618
