@@ -7,19 +7,21 @@ Equities
         GOOGL       
 	JNJ        
 	
- Cumulative returns       
+ 	Cumulative returns       
 	25.083422             
 	12.006322           
 	14.750559          
         5.843728            
-	2.723642           	
- Volatility    
+	2.723642    
+ 
+ 	Volatility    
 	0.018016  
         0.016466
 	0.020901
         0.017196
-	0.010618	                  
- Sharpe Ratio
+	0.010618	
+ 
+        Sharpe Ratio
 	0.93083269
 	0.72998618
 	0.59248069
