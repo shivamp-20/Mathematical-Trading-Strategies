@@ -10,4 +10,4 @@ In this I have created buy/sell signals and then I have calculated various metri
 
 
 ## 🚀 About Me
-I'm currently a first year Electrical Engineering student at Indian Institute Of Technology Kanpur(IIT Kanpur)
+I'm currently a second year Electrical Engineering student at Indian Institute Of Technology Kanpur(IIT Kanpur)
