@@ -1,0 +1,1 @@
+This folder contains a ipynb file with the code of MACD running on **50** S&P 500 stocks out which **41** stocks gave better return than their individual benchmark returns . This proves the fact that the optimised MACD strategy has **82%** efficacy.
