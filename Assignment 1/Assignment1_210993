@@ -1,0 +1,63 @@
+import yfinance as yf
+import pandas as pd
+import numpy as np
+from scipy.stats import norm
+
+equity_symbols = ["AAPL", "MSFT", "AMZN", "GOOGL", "NVDA"]
+index_symbols = ["^GSPC", "^FTSE", "^N225", "^GDAXI", "^HSI"]
+
+# Load historical data for equities
+equities_data = yf.download(equity_symbols, start="2010-01-01", end="2023-05-15")["Adj Close"]
+equities_returns = equities_data.pct_change().dropna()
+equities_volatility = equities_returns.std() * np.sqrt(252)
+
+# Load historical data for indices
+indices_data = yf.download(index_symbols, start="2010-01-01", end="2023-05-15")["Adj Close"]
+indices_returns = indices_data.pct_change().dropna()
+indices_volatility = indices_returns.std() * np.sqrt(252)
+
+# Calculate other metrics for equities (Cumulative Returns, Max Drawdown, Sharpe Ratio, Sortino Ratio)
+equities_cumulative_returns = (1 + equities_returns).cumprod()
+equities_rolling_max = equities_cumulative_returns.cummax()
+equities_drawdown = (equities_cumulative_returns / equities_rolling_max) - 1
+equities_max_drawdown = equities_drawdown.min()
+risk_free_rate = 0.0  # Adjust the risk-free rate if necessary
+equities_annual_returns = equities_returns.mean() * 252
+equities_sharpe_ratio = (equities_annual_returns - risk_free_rate) / equities_volatility
+downside_threshold = 0.0  # Adjust the downside threshold if necessary
+equities_downside_returns = equities_returns[equities_returns < downside_threshold]
+equities_downside_volatility = equities_downside_returns.std() * np.sqrt(252)
+equities_sortino_ratio = (equities_annual_returns - risk_free_rate) / equities_downside_volatility
+
+# Calculate other metrics for indices (Cumulative Returns, Max Drawdown, Sharpe Ratio, Sortino Ratio)
+indices_cumulative_returns = (1 + indices_returns).cumprod()
+indices_rolling_max = indices_cumulative_returns.cummax()
+indices_drawdown = (indices_cumulative_returns / indices_rolling_max) - 1
+indices_max_drawdown = indices_drawdown.min()
+indices_annual_returns = indices_returns.mean() * 252
+indices_sharpe_ratio = (indices_annual_returns - risk_free_rate) / indices_volatility
+indices_downside_returns = indices_returns[indices_returns < downside_threshold]
+indices_downside_volatility = indices_downside_returns.std() * np.sqrt(252)
+indices_sortino_ratio = (indices_annual_returns - risk_free_rate) / indices_downside_volatility
+
+# Print the results for equities
+print("----- Equities -----")
+for symbol in equity_symbols:
+    print("Equity:", symbol)
+    print("Volatility:", equities_volatility[symbol])
+    print("Cumulative Returns:", equities_cumulative_returns[symbol][-1])
+    print("Max Drawdown:", equities_max_drawdown[symbol])
+    print("Sharpe Ratio:", equities_sharpe_ratio[symbol])
+    print("Sortino Ratio:", equities_sortino_ratio[symbol])
+    print("--------------------")
+
+# Print the results for indices
+print("----- Indices -----")
+for symbol in index_symbols:
+    print("Index:", symbol)
+    print("Volatility:", indices_volatility[symbol])
+    print("Cumulative Returns:", indices_cumulative_returns[symbol][-1])
+    print("Max Drawdown:", indices_max_drawdown[symbol])
+    print("Sharpe Ratio:", indices_sharpe_ratio[symbol])
+    print("Sortino Ratio:", indices_sortino_ratio[symbol])
+    print("--------------------")
