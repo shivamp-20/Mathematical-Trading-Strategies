@@ -1,0 +1,54 @@
+import yfinance as yf
+import pandas as pd
+import numpy as np
+
+international_indices = ['^GDAXI', '^IXIC', '^DJI', '^N225', '^HSI']
+equities = ['JPM', 'AMZN', 'GOOGL', 'MSFT', 'NSRGF']
+
+for index in international_indices + equities:
+    data = yf.download(index, start="2010-01-01", end="2023-05-01")
+    data.reset_index(inplace=True)
+    
+    data['Daily_Returns'] = ((data['Close'] - data['Open']) / data['Open']) * 100
+    
+    data['Cummulative_Returns'] = ((data['Daily_Returns'][0]) / 100) + 1
+    
+    for i in range(1, len(data)):
+        data.loc[i, 'Cummulative_Returns'] = (data.loc[i-1, 'Cummulative_Returns']) * (((data.loc[i, 'Daily_Returns']) / 100) + 1)
+    
+    data['sample'] = data['Cummulative_Returns']
+    data['Cummulative_Returns'] = (data['Cummulative_Returns'] - 1) * 100
+    
+    volatility_in_percent = data['Daily_Returns'].std()
+    
+    risk_free_rate = 0
+    
+    sharpe_ratio = (data['Daily_Returns'].mean() - risk_free_rate) / volatility_in_percent
+    
+    negative_values = data['Daily_Returns'][data['Daily_Returns'] < 0]
+    downward_deviation = negative_values.std()
+    
+    sortino_ratio = (data['Daily_Returns'].mean() - risk_free_rate) / downward_deviation
+    
+    data['peak'] = data['sample'][0]
+    
+    for i in range(1, len(data)):
+        if data['sample'][i] > data['peak'][i-1]:
+            data.loc[i, 'peak'] = data['sample'][i]
+        else:
+            data.loc[i, 'peak'] = data['peak'][i-1]
+    
+    data['drawdown'] = ((data['sample']) - (data['peak'])) * 100
+    
+    MDD = data['drawdown'].min()
+    
+    cummulative_returns = data['Cummulative_Returns'].iloc[-1]
+    
+    # Print the results for each index or stock
+    print(f"Symbol: {index}")
+    print("Volatility:", volatility_in_percent)
+    print("Sharpe Ratio:", sharpe_ratio)
+    print("Sortino Ratio:", sortino_ratio)
+    print("Maximum Drawdown:", MDD)
+    print("Cummulative Returns:", cummulative_returns)
+    print("----------------------------------")
