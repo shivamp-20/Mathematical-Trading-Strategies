@@ -1,2 +1,2 @@
 # Mathematical-Trading-Strategies
-Official repo for submission of assignments in Mathematical Trading Strategies
+folder created for submitting assignments of the the project Mathematical Trading Strategies
