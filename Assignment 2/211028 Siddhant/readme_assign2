@@ -1,0 +1,12 @@
+Firstly established a lead lag relationship between NSEI and NDAQ indices. Concluded that NSEI is leading and it can be used to predict NDAQ.
+So NSEI is used to analyse using different indicators. Parameters of indices are optimised for better metric values. Finally, used the optimized parameters for trading NDAQ index. 
+To get optimum returns using
+Keltner Channel strategy-atr period value is taken to be 16 and ema period value is taken to be 25. 
+Bollinger Bands-The factor to be multiplied comes out to standard deviation comes out to be 0.1.
+MACD-The setting is kept to be (15,50,10) to get maximum returns. 
+
+
+                          MACD	     Bollinger Bands	 Keltner Channels
+Cumulative returns	   15.06%       25.04%              13.31%  
+Sharpe Ratio	           0.166         0.32                0.43
+Max Drawdown	          -31.75%      -28.30%             -18.83%
