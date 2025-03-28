@@ -19,14 +19,9 @@ d) Provide an explanation for choosing the index for parameter optimization
 Indicator Coding:
 a) Code Keltner Channel, Bollinger Bands, and MACD indicators.
 
-Parameter Optimization:
-a) Optimize parameters for the indicators on one index.
-b) Use metrics coded in last assignment to evaluate your strategy.
-c) Document the optimized parameters for future reference.
-
 Signal Generation:
 a) Apply optimized parameters to the other index.
 b) Generate buy and sell signals using the indicators.
 c) Record the signals, their respective dates and returns along with other metrics covered before.
 
-Your submission should be a Jupyter notebook, where all cells have been run and contain both code and explanations. The deadline for submission is June 3(Sunday) EOD.
+

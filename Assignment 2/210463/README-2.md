@@ -1,0 +1,5 @@
+MATHEMATICAL TRADING STRATEGIES
+
+Assignment 2
+
+Description: Once the relevant historical data is downloaded from yfinance, for the TASK 1, we use the built-in function <dataframe1>.corr<dataframe2> to calculate the correlation in the data of the two indices of NASDAQ and NSE. For TASK 2, we find the correlation between data of one index and lag in data of the second index. We find this for a lag ranging from one day to 20 days. We repeat but with the lag in theother index this time. Doing this, we see that the correlation is mostly 0.94 when lag is considered in NASDAQ but it is 0.95 when lag is considered in NSE. This suggests that NSE likelys lags behind the NASDAQ index. For TASK 3, we are required to define functions for Keltner Channel, Bollinger Bands and MACD indicators with relevant parameters of time periods, multipliers and index names as function inputs. These functions create a new dataframe with the index's basic data like Open, Close, High, Low and also Upper,Lower(, Middle) Lines (for KC (and BB)) and MACD Line, Signal Line and MACD Histogram for MACD, based on definitions of the indicators and the relevant parameters. 
